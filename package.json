@@ -1,0 +1,34 @@
+{
+  "name": "nd-sql",
+  "version": "1.0.0",
+  "description": "SQL Templating tool for postgreSQL, NodeJS and TypeScript collaboration",
+  "main": "index.js",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "author": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kvezal/nd-sql.git"
+  },
+  "tags": [
+    "SQL",
+    "postgres",
+    "postgreSQL",
+    "typescript",
+    "nodejs"
+  ],
+  "bugs": {
+    "url": "https://github.com/Kvezal/nd-sql/issues"
+  },
+  "homepage": "https://github.com/Kvezal/nd-sql#readme",
+  "dependencies": {
+    "@types/pg": "7.14.7",
+    "pg": "8.5.1",
+    "ramda": "0.27.1",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "4.1.3"
+  }
+}

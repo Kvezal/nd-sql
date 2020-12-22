@@ -1,32 +1,35 @@
-# compiled output
-/dist
-/node_modules
+# dependencies
+node_modules/
 
-# Logs
-logs
-*.log
-npm-debug.log*
+# IDE
+/.idea
+/.awcache
+/.vscode
+*.code-workspace
 
+# bundle
+packages/**/*.d.ts
+packages/**/*.js
 
-# OS
+# misc
 .DS_Store
+lerna-debug.log
+npm-debug.log
+yarn-error.log
+/**/npm-debug.log
+/packages/**/.npmignore
+/packages/**/LICENSE
 
-# Tests
+# example
+/quick-start
+/example_dist
+/example
+
+# tests
+/test
+/benchmarks/memory
 /coverage
 /.nyc_output
-
-# IDEs and editors
-/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+/packages/graphql
+/benchmarks/memory
+build/config\.gypi

@@ -6,7 +6,7 @@ import { source } from '../config';
 
 const project = createProject(`${source}/tsconfig.json`);
 
-function build() {
+function build(): NodeJS.ReadWriteStream {
   return project
     .src()
     .pipe(project())

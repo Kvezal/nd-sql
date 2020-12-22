@@ -8,8 +8,11 @@ node_modules/
 *.code-workspace
 
 # bundle
-packages/**/*.d.ts
-packages/**/*.js
+src/**/*.d.ts
+src/**/*.js
+src/.npmignore
+src/LICENSE.md
+src/README.md
 
 # misc
 .DS_Store

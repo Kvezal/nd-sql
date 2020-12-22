@@ -15,8 +15,6 @@ function cleanOutput(): NodeJS.ReadWriteStream {
     [
       `${source}/**/*.js`,
       `${source}/**/*.d.ts`,
-      `${source}/**/*.js.map`,
-      `${source}/**/*.d.ts.map`,
       ...srcMisc,
     ],
     {

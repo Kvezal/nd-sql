@@ -2,7 +2,7 @@
   "name": "nd-sql",
   "version": "1.0.0",
   "description": "SQL Templating tool for postgreSQL, NodeJS and TypeScript collaboration",
-  "main": "index.js",
+  "main": "./src",
   "license": "MIT",
   "readmeFilename": "README.md",
   "author": "",

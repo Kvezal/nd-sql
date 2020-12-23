@@ -10,4 +10,5 @@
 package-lock.json
 tslint.json
 tsconfig.json
+gulpfile.js
 .prettierrc

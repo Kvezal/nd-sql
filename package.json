@@ -1,13 +1,14 @@
 {
   "name": "nd-sql",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "SQL Templating tool for postgreSQL, NodeJS and TypeScript collaboration",
-  "main": "./src",
+  "main": "src",
   "license": "MIT",
   "readmeFilename": "README.md",
   "author": "",
   "scripts": {
-    "prerelease": "gulp copy-misc && gulp build"
+    "prerelease": "gulp copy-misc && gulp build",
+    "release": "npm run prerelease && npm publish"
   },
   "repository": {
     "type": "git",

@@ -2,6 +2,6 @@ import { IRowParams } from '../../core';
 
 
 export interface IDbRemoveOneRecord {
-  removeOne<Type = IRowParams>(value?: Partial<Type>): Promise<Type[]>;
-  removeOne<Type = IRowParams>(value?: Partial<Type>, sql?: string): Promise<Type[]>;
+  removeOne<Type>(value?: IRowParams): Promise<Type[]>;
+  removeOne<Type>(value?: IRowParams, sql?: string): Promise<Type[]>;
 }

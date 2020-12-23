@@ -1,12 +1,9 @@
-import { IRowParams } from '../db-connector';
-
-
-export interface IQueryOneParams<Type = IRowParams> {
+export interface IQueryOneParams<Type> {
   sql: string;
-  value?: Type;
+  value?: Partial<Type>;
 }
 
-export interface IQueryAllParams<Type = IRowParams> {
+export interface IQueryAllParams<Type> {
   sql: string;
-  list: Type[];
+  list: Partial<Type>[];
 }

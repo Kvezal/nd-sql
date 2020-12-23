@@ -16,7 +16,7 @@ export class DbRequester {
   }
 
   public async createOne<Type>(config: IQueryOneParams<Type>): Promise<Type> {
-    const queryConfig: IQueryParams = this.sqlPreparer.getQueryParamsForOne<Type>(
+    const queryConfig: IQueryParams<Type> = this.sqlPreparer.getQueryParamsForOne<Type>(
       config,
     );
     const result: Type[] = await this._connector.query<Type>(queryConfig);
@@ -26,14 +26,14 @@ export class DbRequester {
   public async createList<Type>(
     config: IQueryAllParams<Type>,
   ): Promise<Type[]> {
-    const queryConfig: IQueryParams = this.sqlPreparer.getQueryParamsForList<Type>(
+    const queryConfig: IQueryParams<Type> = this.sqlPreparer.getQueryParamsForList<Type>(
       config,
     );
     return this._connector.query<Type>(queryConfig);
   }
 
   public async updateOne<Type>(config: IQueryOneParams<Type>): Promise<Type> {
-    const queryConfig: IQueryParams = this.sqlPreparer.getQueryParamsForOne<Type>(
+    const queryConfig: IQueryParams<Type> = this.sqlPreparer.getQueryParamsForOne<Type>(
       config,
     );
     const result: Type[] = await this._connector.query<Type>(queryConfig);
@@ -41,7 +41,7 @@ export class DbRequester {
   }
 
   public async removeOne<Type>(config: IQueryOneParams<Type>): Promise<Type> {
-    const queryConfig: IQueryParams = this.sqlPreparer.getQueryParamsForOne<Type>(
+    const queryConfig: IQueryParams<Type> = this.sqlPreparer.getQueryParamsForOne<Type>(
       config,
     );
     const result: Type[] = await this._connector.query<Type>(queryConfig);
@@ -49,7 +49,7 @@ export class DbRequester {
   }
 
   public async findOne<Type>(config): Promise<Type> {
-    const queryConfig: IQueryParams = this.sqlPreparer.getQueryParamsForOne(
+    const queryConfig: IQueryParams<Type> = this.sqlPreparer.getQueryParamsForOne(
       config,
     );
     console.log(queryConfig);
@@ -59,8 +59,8 @@ export class DbRequester {
     return result?.[0];
   }
 
-  public async findList<Type>(config: IQueryOneParams): Promise<Type[]> {
-    const queryConfig: IQueryParams = this.sqlPreparer.getQueryParamsForOne(
+  public async findList<Type>(config: IQueryOneParams<Type>): Promise<Type[]> {
+    const queryConfig: IQueryParams<Type> = this.sqlPreparer.getQueryParamsForOne(
       config,
     );
     return this._connector.query<Type>(queryConfig).catch(() => []);

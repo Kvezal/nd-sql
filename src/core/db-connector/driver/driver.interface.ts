@@ -11,20 +11,15 @@ export interface IDbDriverConfig {
 }
 
 export interface IDbDriver {
-  query<Type>(config: IQueryParams): Promise<Type[]>;
+  query<Type>(config: IQueryParams<Type>): Promise<Type[]>;
 }
 
 export interface IDbDriverClass {
   new(config: IDbDriverConfig): IDbDriver;
 }
 
-export type TColumnParam = string | number | boolean | IRowParams;
 
-export interface IRowParams {
-  [key: string]: TColumnParam;
-}
-
-export interface IQueryParams<Type = IRowParams> {
+export interface IQueryParams<Type> {
   text: string;
-  values: Type[];
+  values: Partial<Type>[];
 }

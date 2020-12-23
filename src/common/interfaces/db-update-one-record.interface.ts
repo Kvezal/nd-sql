@@ -1,7 +1,4 @@
-import { IRowParams } from '../../core';
-
-
 export interface IDbUpdateOneRecord {
-  updateOne<Type>(value?: IRowParams): Promise<Type[]>;
-  updateOne<Type>(value?: IRowParams, sql?: string): Promise<Type[]>;
+  updateOne<Type>(value?: Partial<Type>): Promise<Type[]>;
+  updateOne<Type>(value?: Partial<Type>, sql?: string): Promise<Type[]>;
 }

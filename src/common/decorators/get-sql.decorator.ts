@@ -12,7 +12,7 @@ export const GetSql = (sqlPath: string) => (
   propertyKey: string,
   value,
 ) => ({
-  value: async function (params: any) {
+  value: async function (params) {
     const classDirectory = DbTableMap.get(target.constructor);
     const sqlFilePath = resolve(classDirectory, `../`, sqlPath);
     const buffer = await asyncReadFile(sqlFilePath);

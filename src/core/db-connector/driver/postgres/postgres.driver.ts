@@ -27,7 +27,7 @@ class PostgresDriver implements IDbDriver {
     return this._client;
   }
 
-  async query<Type>(config: IQueryParams): Promise<any> {
+  async query<Type>(config: IQueryParams<Type>): Promise<Type[]> {
     const client = await this._getClient();
     const result: QueryResult<Type> = await client.query(config);
     return result.rows;

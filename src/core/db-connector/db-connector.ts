@@ -40,7 +40,7 @@ export class DbConnector implements IDbDriver {
     });
   }
 
-  public async query<Type>(config: IQueryParams): Promise<Type[]> {
+  public async query<Type>(config: IQueryParams<Type>): Promise<Type[]> {
     return this._driver.query(config);
   }
 }

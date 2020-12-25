@@ -52,7 +52,6 @@ export class DbRequester {
     const queryConfig: IQueryParams<Type> = this.sqlPreparer.getQueryParamsForOne(
       config,
     );
-    console.log(queryConfig);
     const result = await this._connector
       .query<Type>(queryConfig)
       .catch(() => null);

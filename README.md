@@ -195,10 +195,10 @@ export const dbRequester = new DbRequester(connector);
 
 ## Docs
 - [db-config](#db-config)
-- DbConnector
-- DbRequester
-- Decorator
-- Additional features for working with SQL
+- [DbConnector](#dbconnector)
+- [DbRequester](#dbrequester)
+- [Decorator](#decorators)
+- [Additional features for working with SQL](#additional-features-for-working-with-sql)
 
 
 ### <a name="#db-config"></a>db-config
@@ -207,7 +207,7 @@ Config allows optimize searching of database table classes`* .sql`
 - `match` - sets part of the file name to look for
 
 
-### DbConnector
+### <a name="#dbconnector"></a>DbConnector
 Database connector allows to connect to DB
 
 `init` method with config params:
@@ -226,7 +226,7 @@ Database connector allows to connect to DB
 - `values` - array of params
 
 
-### DbRequester
+### <a name="#dbrequester"></a>DbRequester
 Requester allows request to DB via:
 - `createOne` - create one record (has `IDbCreateOneRecord` interface)
 - `createList` - creates record array (has `IDbCreateAllRecords` interface)
@@ -236,7 +236,7 @@ Requester allows request to DB via:
 - `findList`- find list of record (has `IDbFindAllRecords` interface)
 
 
-### Decorators
+### <a name="#decorators"></a>Decorators
 
 #### DbTable
 `@DbTable` decorator allows create a table in database if not exists, config can contain:
@@ -297,7 +297,7 @@ export class CitiesDbTable implements IDbFindOneRecord {
 ```
 
 
-### Additional features for working with SQL
+### <a name="#additional-features-for-working-with-sql"></a>Additional features for working with SQL
 - named params - allows use object properties how values of Requester methods, for example:
 
 `favorites.db-table.ts` contains:  

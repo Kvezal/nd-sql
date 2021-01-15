@@ -70,7 +70,17 @@ FROM cities_result
 LEFT JOIN locations_result ON cities_result.location_id = locations_result.id;
 ```
 
-##Get started:
+
+## Docs
+- [Get started](#get-started)
+- [db-config](#db-config)
+- [DbConnector](#dbconnector)
+- [DbRequester](#dbrequester)
+- [Decorator](#decorators)
+- [Additional features for working with SQL](#additional-features-for-working-with-sql)
+
+
+### <a name="#get-started"></a>Get started:
 1) Install the npm package:
 ```
 npm install nd-sql
@@ -191,14 +201,6 @@ const connector: DbConnector = await DbConnector.init({
 
 export const dbRequester = new DbRequester(connector);
 ```
-
-
-## Docs
-- [db-config](#db-config)
-- [DbConnector](#dbconnector)
-- [DbRequester](#dbrequester)
-- [Decorator](#decorators)
-- [Additional features for working with SQL](#additional-features-for-working-with-sql)
 
 
 ### <a name="#db-config"></a>db-config
